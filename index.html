@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="startanimation">
+        <div class="animbox">
+            <span class="one-h">H</span>
+            <span class="two-e">E</span>
+            <span class="three-l">L</span>
+            <span class="four-l">L</span>
+            <span class="five-o">O</span>
+            <span class="six-e" id="activateGame"><i class="fa-solid fa-play"></i></span>
+        </div>
+    </div>
+    <div class="enternamebox">
+        <div class="textbox">
+            <i class="fa-solid fa-user"></i>
+            <p>Введите имя Первого игрока</p>
+        </div>
+        <div class="inputbox">
+            <input type="text" id="playerNameInput">
+            <button id="setNameBtn">Отправить</button>
+        </div>
+        <button id="startGameBtn">Play <i class="fa-solid fa-play"></i></button>
+    </div>    
+    <div class="container">
+        <div class="diceinfo">
+            <div class="dice">
+                <p id="diceValue1">0</p>
+                <p id="diceValue2">0</p>
+            </div>
+            <p id="diceSum">Сумма: 0</p>
+        </div>
+        <div class="buttonsgame">
+            <button id="resetBtn"><i class="fa-solid fa-rotate-right"></i></button>
+            <button id="startBtn"><i class="fa-solid fa-dice"></i></button>
+        </div>
+    </div>
+    <div class="playercount">
+        <p id="playerMove">Ход игрока Player1</p>
+        <div class="playerinfobox">
+            <div class="playerinfo" id="player1Info">
+                <p><i class="fa-solid fa-splotch"></i>Player 1</p>
+                <p>Счет: 0<i class="fa-solid fa-heart"></i></p>
+            </div>
+            <div class="playerinfo" id="player2Info">
+                <p><i class="fa-solid fa-splotch"></i>Player 2</p>
+                <p>Счет: 0<i class="fa-solid fa-heart"></i></p>
+            </div>
+            <div class="playerinfo" id="player3Info">
+                <p><i class="fa-solid fa-splotch"></i>Player 3</p>
+                <p>Счет: 0<i class="fa-solid fa-heart"></i></p>
+            </div>
+            <div class="playerinfo" id="player4Info">
+                <p><i class="fa-solid fa-splotch"></i>Player 4</p>
+                <p>Счет: 0<i class="fa-solid fa-heart"></i></p>
+            </div>
+        </div>        
+    </div>
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/3d05b8f0f7.js" crossorigin="anonymous"></script>
+</body>
+</html>

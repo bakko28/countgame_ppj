@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Modak&family=Montserrat+Alternates:wght@300;400;500;700&display=swap');
+
+/* fonts {
+    font-family: "Manrope", sans-serif;
+    font-family: "Modak", system-ui;
+    font-family: "Montserrat Alternates", sans-serif;
+} */
+
+/* colors {
+    color: #d6d6d6;
+    color: #ffee32;
+    color: #ffd100;
+    color: #202020;
+    color: #333533;
+} */
+
+@keyframes rotateBtn {
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: 360deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+@keyframes easeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #fff;
+}
+
+i {
+    margin: 8px;
+}
+
+button {
+    cursor: pointer;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+/* body {
+    overflow-x: hidden;
+    background-color: #d6d6d6;
+    display: grid;
+    gap: 4px;
+    grid-template-rows: 40px auto 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'header' 'main' 'footer' 'nav';
+    height: 100vh;
+} */
+
+body {
+    background-color: #d6d6d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    animation: easeIn 1s ease-in;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    background-color: #333533;
+}
+
+.container button {
+    font-size: 36px;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 8px;
+    background-color: #ffee32;
+    -webkit-box-shadow: 5px 5px 8px -2px rgba(255, 209, 0, 0.41);
+    -moz-box-shadow: 5px 5px 8px -2px rgba(255, 209, 0, 0.41);
+    box-shadow: 5px 5px 8px -2px rgba(255, 209, 0, 0.41);
+}
+
+.container button:hover i {
+    animation: rotateBtn 3s ease-in-out infinite;
+}
+
+.dice {
+    display: flex;
+}
+
+.diceinfo {
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+}
+
+.dice p {
+    margin: 8px;
+}
+
+.playercount {
+    animation: easeIn 1s ease-in;
+    margin: 8px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 30px;
+    background-color: #333533;
+}
+
+.playerinfobox {
+    display: flex;
+}
+
+#playerMove {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #202020;
+}
+
+.playerinfo {
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+}
+
+.playerinfobox .playerinfo:nth-child(1) p:nth-child(1) i:nth-child(1){
+    color: #6a994e;
+}
+
+.playerinfobox .playerinfo:nth-child(2) p:nth-child(1) i:nth-child(1){
+    color: #bc4749;
+}
+
+.playerinfobox .playerinfo:nth-child(3) p:nth-child(1) i:nth-child(1){
+    color: #0077b6;
+}
+
+.playerinfobox .playerinfo:nth-child(4) p:nth-child(1) i:nth-child(1){
+    color: #ff99c8;
+}
+
+.startanimation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        font-family: monospace;
+        font-size: 3rem;
+        color: #555;
+        margin: 5px;
+        transition: all .4s ease-in-out;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .1);
+        transform-origin: center;
+        position: relative;
+        &.one-h {
+        transform: skew(0deg, -20deg) rotatey(45deg) translate(310px, 50px);
+        }
+        &.two-e {
+        transform: rotatex(68deg) rotatez(45deg) translate(-27px, -237px);
+        z-index: 1;
+        }
+        &.three-l {
+        transform: skew(0deg, 20deg) rotatey(-45deg);
+        margin-right: -10px;
+        z-index: 1;
+        }
+        &.four-l {
+        transform: skew(0deg, -20deg) rotatey(45deg);
+        margin-left: -10px;
+        z-index: 1;
+        }
+        &.five-o {
+        transform: rotatex(-68deg) rotatez(-45deg) translate(-175px, -40px);
+        z-index: 0;
+        }
+        &.six-e {
+            cursor: pointer;
+        transform: skew(0deg, 20deg) rotatey(-45deg) translate(-312px, 50px);
+        z-index: 0;
+        }
+    }
+
+.animbox {
+    display: flex;
+    &:hover {
+    span {
+        transform: initial;
+        margin: 5px;
+        animation: .4s spin ease-in-out;
+    }
+    }
+}
+}
+
+.enternamebox {
+    animation: easeIn 1s ease-in;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    padding: 16px;
+    height: 300px;
+    border-radius: 30px;
+    background-color: #333533;
+}
+
+.textbox {
+    background-color: #202020;
+    border-radius: 16px;
+    padding: 8px;
+    width: 400px;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+}
+
+.inputbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    border-radius: 16px;
+    width: 400px;
+    padding: 8px;
+}
+
+.inputbox button {
+    font-weight: 500;
+    border-radius: 8px;
+    background-color: #d6d6d6;
+    margin: 8px;
+    padding: 8px;
+    font-size: 24px;
+}
+
+.inputbox input {
+    border-radius: 8px;
+    margin: 8px;
+    color: #000;
+    font-size: 24px;
+    padding: 8px;
+    width: 210px;
+    height: 50px;
+    background-color: #d6d6d6;
+    outline: none;
+    border: none;
+}
+
+.enternamebox .textbox i {
+    color: #fff;
+    font-size: 72px;
+}
+
+#startGameBtn {
+    width: 400px;
+    margin: 8px;
+    padding: 8px;
+    font-size: 24px;
+    background-color: #d6d6d6;
+    border-radius: 8px;
+}
+
